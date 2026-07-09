@@ -1,0 +1,6 @@
+cat /sys/devices/system/cpu/cpufreq/policy0/scaling_available_governors
+cat /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
+cpupower frequency-info
+sudo cpupower frequency-set -g powersave
+sudo cpupower frequency-set -g performance
+watch -n1 "grep 'cpu MHz' /proc/cpuinfo"
